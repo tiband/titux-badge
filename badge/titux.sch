@@ -1,0 +1,516 @@
+EESchema Schematic File Version 4
+EELAYER 30 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L MCU_Microchip_ATtiny:ATtiny84A-SSU U1
+U 1 1 5DDAC348
+P 4500 4050
+F 0 "U1" H 3850 4850 50  0000 L CNN
+F 1 "ATtiny84A-SSU" H 3850 4950 50  0000 L CNN
+F 2 "Housings_SOIC:SOIC-14_3.9x8.7mm_Pitch1.27mm" H 4500 4050 50  0001 C CIN
+F 3 "http://ww1.microchip.com/downloads/en/DeviceDoc/doc8183.pdf" H 4500 4050 50  0001 C CNN
+	1    4500 4050
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:Battery_Cell BT1
+U 1 1 5DE43CB1
+P 2350 3550
+F 0 "BT1" H 2500 3650 50  0000 L CNN
+F 1 "Battery_Cell" H 2500 3550 50  0000 L CNN
+F 2 "Tiband:KZH_20SMD_1x20mm-CoinCell" V 2350 3610 50  0001 C CNN
+F 3 "~" V 2350 3610 50  0001 C CNN
+	1    2350 3550
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4500 3000 4500 3150
+Wire Wire Line
+	4500 4950 4500 5100
+Wire Wire Line
+	6600 3850 6600 4100
+Wire Wire Line
+	6400 4050 6400 4300
+Text Label 6750 4100 0    50   ~ 0
+SCK
+Text Label 6750 4400 0    50   ~ 0
+MISO
+Text Label 6750 4300 0    50   ~ 0
+MOSI
+Text Label 6750 4200 0    50   ~ 0
+RESET
+$Comp
+L Switch:SW_Push SW1
+U 1 1 5DE49A6E
+P 5800 4950
+F 0 "SW1" H 5800 5150 50  0000 C CNN
+F 1 "SW_Push" H 5800 5144 50  0001 C CNN
+F 2 "Tiband:Switch_SMD_rotated_6x6x4,3" H 5800 5150 50  0001 C CNN
+F 3 "~" H 5800 5150 50  0001 C CNN
+	1    5800 4950
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C1
+U 1 1 5DE4EB42
+P 3650 4000
+F 0 "C1" H 3765 4046 50  0000 L CNN
+F 1 "100n" H 3765 3955 50  0000 L CNN
+F 2 "Capacitors_SMD:C_0603_HandSoldering" H 3688 3850 50  0001 C CNN
+F 3 "~" H 3650 4000 50  0001 C CNN
+	1    3650 4000
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3650 3850 3650 3000
+Wire Wire Line
+	3650 4150 3650 5100
+Connection ~ 6000 4550
+$Comp
+L Device:R R10
+U 1 1 5DE5535E
+P 6000 3300
+F 0 "R10" H 6070 3346 50  0000 L CNN
+F 1 "10k" H 6070 3255 50  0000 L CNN
+F 2 "Resistors_SMD:R_0603_HandSoldering" V 5930 3300 50  0001 C CNN
+F 3 "~" H 6000 3300 50  0001 C CNN
+	1    6000 3300
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6000 3000 6000 3150
+Wire Wire Line
+	6000 3450 6000 4550
+$Comp
+L Device:R R11
+U 1 1 5DE563EE
+P 6300 3300
+F 0 "R11" H 6370 3346 50  0000 L CNN
+F 1 "10k" H 6370 3255 50  0000 L CNN
+F 2 "Resistors_SMD:R_0603_HandSoldering" V 6230 3300 50  0001 C CNN
+F 3 "~" H 6300 3300 50  0001 C CNN
+	1    6300 3300
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6300 4200 6300 4650
+Wire Wire Line
+	6500 4400 7000 4400
+Wire Wire Line
+	6500 3950 6500 4400
+Wire Wire Line
+	6300 4200 7000 4200
+Wire Wire Line
+	6500 4500 7000 4500
+Wire Wire Line
+	6600 4100 7000 4100
+Wire Wire Line
+	6400 4300 7000 4300
+Text Label 6750 4500 0    50   ~ 0
+GND
+Wire Wire Line
+	6000 4950 6000 4550
+Wire Wire Line
+	6500 5100 6500 4500
+Wire Wire Line
+	5600 4950 5600 5100
+Connection ~ 5600 5100
+Wire Wire Line
+	5600 5100 6500 5100
+Wire Wire Line
+	6000 3000 6300 3000
+Wire Wire Line
+	6700 3000 6700 4000
+Wire Wire Line
+	6700 4000 7000 4000
+Connection ~ 6000 3000
+Text Label 6750 4000 0    50   ~ 0
+VCC
+Wire Wire Line
+	6300 4200 6300 3450
+Connection ~ 6300 4200
+Wire Wire Line
+	6300 3150 6300 3000
+Connection ~ 6300 3000
+Wire Wire Line
+	6300 3000 6700 3000
+Wire Wire Line
+	4500 3000 6000 3000
+Connection ~ 4500 3000
+Wire Wire Line
+	5100 3850 6600 3850
+Wire Wire Line
+	5100 3950 6500 3950
+Wire Wire Line
+	5100 4050 6400 4050
+Wire Wire Line
+	5100 4550 6000 4550
+Wire Wire Line
+	5100 4650 6300 4650
+Wire Wire Line
+	4500 5100 5600 5100
+Connection ~ 4500 5100
+Connection ~ 2350 4850
+Wire Wire Line
+	2350 3350 2350 3000
+Wire Wire Line
+	3650 5100 4500 5100
+Wire Wire Line
+	3650 3000 4500 3000
+Wire Wire Line
+	5100 3450 5450 3450
+Wire Wire Line
+	5100 3550 5450 3550
+Wire Wire Line
+	5100 3650 5450 3650
+Wire Wire Line
+	5100 3750 5450 3750
+Text Label 5150 4350 0    50   ~ 0
+LED_R3
+Text Label 5150 3550 0    50   ~ 0
+LED_B1
+Wire Wire Line
+	5450 4350 5100 4350
+Wire Wire Line
+	5450 4450 5100 4450
+$Comp
+L power:PWR_FLAG #FLG0101
+U 1 1 5DEB21D6
+P 6850 4800
+F 0 "#FLG0101" H 6850 4875 50  0001 C CNN
+F 1 "PWR_FLAG" H 6850 4973 50  0001 C CNN
+F 2 "" H 6850 4800 50  0001 C CNN
+F 3 "~" H 6850 4800 50  0001 C CNN
+	1    6850 4800
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:VCC #PWR0103
+U 1 1 5DEB3559
+P 6850 4900
+F 0 "#PWR0103" H 6850 4750 50  0001 C CNN
+F 1 "VCC" H 6850 5050 50  0000 C BNN
+F 2 "" H 6850 4900 50  0001 C CNN
+F 3 "" H 6850 4900 50  0001 C CNN
+	1    6850 4900
+	-1   0    0    1   
+$EndComp
+$Comp
+L power:GND #PWR0104
+U 1 1 5DEB3ED0
+P 7050 4900
+F 0 "#PWR0104" H 7050 4650 50  0001 C CNN
+F 1 "GND" H 7050 4700 50  0000 C BNN
+F 2 "" H 7050 4900 50  0001 C CNN
+F 3 "" H 7050 4900 50  0001 C CNN
+	1    7050 4900
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:PWR_FLAG #FLG0102
+U 1 1 5DEB464A
+P 7050 4800
+F 0 "#FLG0102" H 7050 4875 50  0001 C CNN
+F 1 "PWR_FLAG" H 7050 4973 50  0001 C CNN
+F 2 "" H 7050 4800 50  0001 C CNN
+F 3 "~" H 7050 4800 50  0001 C CNN
+	1    7050 4800
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6850 4800 6850 4900
+Wire Wire Line
+	7050 4800 7050 4900
+Wire Wire Line
+	2350 4850 2350 5000
+Wire Wire Line
+	2350 3650 2350 4050
+Connection ~ 2350 4450
+Wire Wire Line
+	2350 4450 2350 4600
+Connection ~ 2350 4600
+Wire Wire Line
+	2350 4600 2350 4850
+Connection ~ 2350 4200
+Wire Wire Line
+	2350 4200 2350 4450
+Connection ~ 2350 4050
+Wire Wire Line
+	2350 4050 2350 4200
+Connection ~ 2350 5000
+Wire Wire Line
+	2350 5000 2350 5100
+Wire Wire Line
+	2350 5100 3650 5100
+Connection ~ 3650 5100
+Wire Wire Line
+	2350 3000 3650 3000
+Connection ~ 3650 3000
+Text Label 5150 3650 0    50   ~ 0
+LED_R2
+Text Label 5150 4450 0    50   ~ 0
+LED_B3
+Text Label 5150 3750 0    50   ~ 0
+LED_B2
+Text Label 5150 3450 0    50   ~ 0
+LED_R1
+Wire Wire Line
+	2400 5000 2350 5000
+Wire Wire Line
+	2600 5000 2650 5000
+Wire Wire Line
+	2600 4850 2650 4850
+Wire Wire Line
+	2600 4600 2650 4600
+Wire Wire Line
+	2650 4450 2600 4450
+Wire Wire Line
+	2650 4200 2600 4200
+Wire Wire Line
+	2650 4050 2600 4050
+Wire Wire Line
+	2400 4050 2350 4050
+Wire Wire Line
+	2400 4200 2350 4200
+Wire Wire Line
+	2400 4600 2350 4600
+Wire Wire Line
+	2400 4450 2350 4450
+Wire Wire Line
+	2400 4850 2350 4850
+$Comp
+L Device:R_Small R6
+U 1 1 5DEE4C8A
+P 2500 5000
+F 0 "R6" V 2450 5200 50  0000 R CNN
+F 1 "R_Small" V 2605 5000 50  0001 C CNN
+F 2 "Resistors_SMD:R_0603_HandSoldering" H 2500 5000 50  0001 C CNN
+F 3 "~" H 2500 5000 50  0001 C CNN
+	1    2500 5000
+	0    1    -1   0   
+$EndComp
+$Comp
+L Device:R_Small R5
+U 1 1 5DEE4991
+P 2500 4850
+F 0 "R5" V 2450 5050 50  0000 R CNN
+F 1 "R_Small" V 2605 4850 50  0001 C CNN
+F 2 "Resistors_SMD:R_0603_HandSoldering" H 2500 4850 50  0001 C CNN
+F 3 "~" H 2500 4850 50  0001 C CNN
+	1    2500 4850
+	0    1    -1   0   
+$EndComp
+$Comp
+L Device:R_Small R4
+U 1 1 5DEE46E7
+P 2500 4600
+F 0 "R4" V 2450 4800 50  0000 R CNN
+F 1 "R_Small" V 2605 4600 50  0001 C CNN
+F 2 "Resistors_SMD:R_0603_HandSoldering" H 2500 4600 50  0001 C CNN
+F 3 "~" H 2500 4600 50  0001 C CNN
+	1    2500 4600
+	0    1    -1   0   
+$EndComp
+$Comp
+L Device:R_Small R3
+U 1 1 5DEE448F
+P 2500 4450
+F 0 "R3" V 2450 4650 50  0000 R CNN
+F 1 "R_Small" V 2605 4450 50  0001 C CNN
+F 2 "Resistors_SMD:R_0603_HandSoldering" H 2500 4450 50  0001 C CNN
+F 3 "~" H 2500 4450 50  0001 C CNN
+	1    2500 4450
+	0    1    -1   0   
+$EndComp
+$Comp
+L Device:R_Small R2
+U 1 1 5DEE40FC
+P 2500 4200
+F 0 "R2" V 2450 4400 50  0000 R CNN
+F 1 "R_Small" V 2605 4200 50  0001 C CNN
+F 2 "Resistors_SMD:R_0603_HandSoldering" H 2500 4200 50  0001 C CNN
+F 3 "~" H 2500 4200 50  0001 C CNN
+	1    2500 4200
+	0    1    -1   0   
+$EndComp
+$Comp
+L Device:R_Small R1
+U 1 1 5DEDD095
+P 2500 4050
+F 0 "R1" V 2450 4250 50  0000 R CNN
+F 1 "R_Small" V 2605 4050 50  0001 C CNN
+F 2 "Resistors_SMD:R_0603_HandSoldering" H 2500 4050 50  0001 C CNN
+F 3 "~" H 2500 4050 50  0001 C CNN
+	1    2500 4050
+	0    1    -1   0   
+$EndComp
+Text Label 2900 5000 0    50   ~ 0
+LED_R3
+Text Label 2900 4600 0    50   ~ 0
+LED_R2
+Text Label 2900 4850 0    50   ~ 0
+LED_B3
+Text Label 2900 4450 0    50   ~ 0
+LED_B2
+Text Label 2900 4200 0    50   ~ 0
+LED_R1
+Wire Wire Line
+	3200 5000 2850 5000
+Wire Wire Line
+	3200 4850 2850 4850
+Wire Wire Line
+	3200 4600 2850 4600
+Wire Wire Line
+	3200 4450 2850 4450
+Wire Wire Line
+	3200 4200 2850 4200
+Wire Wire Line
+	2850 4050 3200 4050
+Text Label 2900 4050 0    50   ~ 0
+LED_B1
+$Comp
+L Device:LED_Small D6
+U 1 1 5DE7899C
+P 2750 5000
+F 0 "D6" H 2950 5050 50  0000 R CNN
+F 1 "LED_Small" V 2705 4932 50  0001 R CNN
+F 2 "LEDs:LED_0603_HandSoldering" V 2750 5000 50  0001 C CNN
+F 3 "~" V 2750 5000 50  0001 C CNN
+	1    2750 5000
+	1    0    0    1   
+$EndComp
+$Comp
+L Device:LED_Small D5
+U 1 1 5DE784AA
+P 2750 4850
+F 0 "D5" H 2950 4900 50  0000 R CNN
+F 1 "LED_Small" V 2705 4782 50  0001 R CNN
+F 2 "LEDs:LED_0603_HandSoldering" V 2750 4850 50  0001 C CNN
+F 3 "~" V 2750 4850 50  0001 C CNN
+	1    2750 4850
+	1    0    0    1   
+$EndComp
+$Comp
+L Device:LED_Small D4
+U 1 1 5DE776A6
+P 2750 4600
+F 0 "D4" H 2950 4650 50  0000 R CNN
+F 1 "LED_Small" V 2705 4532 50  0001 R CNN
+F 2 "LEDs:LED_0603_HandSoldering" V 2750 4600 50  0001 C CNN
+F 3 "~" V 2750 4600 50  0001 C CNN
+	1    2750 4600
+	1    0    0    1   
+$EndComp
+$Comp
+L Device:LED_Small D3
+U 1 1 5DE7708F
+P 2750 4450
+F 0 "D3" H 2950 4500 50  0000 R CNN
+F 1 "LED_Small" V 2705 4382 50  0001 R CNN
+F 2 "LEDs:LED_0603_HandSoldering" V 2750 4450 50  0001 C CNN
+F 3 "~" V 2750 4450 50  0001 C CNN
+	1    2750 4450
+	1    0    0    1   
+$EndComp
+$Comp
+L Device:LED_Small D2
+U 1 1 5DE76A86
+P 2750 4200
+F 0 "D2" H 2950 4250 50  0000 R CNN
+F 1 "LED_Small" V 2705 4132 50  0001 R CNN
+F 2 "LEDs:LED_0603_HandSoldering" V 2750 4200 50  0001 C CNN
+F 3 "~" V 2750 4200 50  0001 C CNN
+	1    2750 4200
+	1    0    0    1   
+$EndComp
+$Comp
+L Device:LED_Small D1
+U 1 1 5DE6EC43
+P 2750 4050
+F 0 "D1" H 2950 4100 50  0000 R CNN
+F 1 "LED_Small" V 2705 3982 50  0001 R CNN
+F 2 "LEDs:LED_0603_HandSoldering" V 2750 4050 50  0001 C CNN
+F 3 "~" V 2750 4050 50  0001 C CNN
+	1    2750 4050
+	1    0    0    1   
+$EndComp
+NoConn ~ 5100 4150
+$Comp
+L Connector_Generic:Conn_01x01 J1
+U 1 1 5DEAC74B
+P 7200 4000
+F 0 "J1" H 7280 4042 50  0000 L CNN
+F 1 "Conn_01x01" H 7400 4050 50  0000 L CNN
+F 2 "Tiband:KrokoPad" H 7200 4000 50  0001 C CNN
+F 3 "~" H 7200 4000 50  0001 C CNN
+	1    7200 4000
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector_Generic:Conn_01x01 J2
+U 1 1 5DEAD95C
+P 7200 4100
+F 0 "J2" H 7280 4142 50  0000 L CNN
+F 1 "Conn_01x01" H 7400 4150 50  0000 L CNN
+F 2 "Tiband:KrokoPad" H 7200 4100 50  0001 C CNN
+F 3 "~" H 7200 4100 50  0001 C CNN
+	1    7200 4100
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector_Generic:Conn_01x01 J3
+U 1 1 5DEADC2D
+P 7200 4200
+F 0 "J3" H 7280 4242 50  0000 L CNN
+F 1 "Conn_01x01" H 7400 4250 50  0000 L CNN
+F 2 "Tiband:KrokoPad" H 7200 4200 50  0001 C CNN
+F 3 "~" H 7200 4200 50  0001 C CNN
+	1    7200 4200
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector_Generic:Conn_01x01 J4
+U 1 1 5DEADEFC
+P 7200 4300
+F 0 "J4" H 7280 4342 50  0000 L CNN
+F 1 "Conn_01x01" H 7400 4350 50  0000 L CNN
+F 2 "Tiband:KrokoPad" H 7200 4300 50  0001 C CNN
+F 3 "~" H 7200 4300 50  0001 C CNN
+	1    7200 4300
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector_Generic:Conn_01x01 J5
+U 1 1 5DEAE0C1
+P 7200 4400
+F 0 "J5" H 7280 4442 50  0000 L CNN
+F 1 "Conn_01x01" H 7400 4450 50  0000 L CNN
+F 2 "Tiband:KrokoPad" H 7200 4400 50  0001 C CNN
+F 3 "~" H 7200 4400 50  0001 C CNN
+	1    7200 4400
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector_Generic:Conn_01x01 J6
+U 1 1 5DEAE2EC
+P 7200 4500
+F 0 "J6" H 7280 4542 50  0000 L CNN
+F 1 "Conn_01x01" H 7400 4550 50  0000 L CNN
+F 2 "Tiband:KrokoPad" H 7200 4500 50  0001 C CNN
+F 3 "~" H 7200 4500 50  0001 C CNN
+	1    7200 4500
+	1    0    0    -1  
+$EndComp
+$EndSCHEMATC
